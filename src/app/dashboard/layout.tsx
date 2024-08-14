@@ -6,6 +6,7 @@ import Link from "next/link";
 const links = [
   { name: "accordion", href: "accordion" },
   { name: "alert", href: "alert" },
+  { name: "button", href: "button" }
 ];
 
 export default function DashboardLayout({
@@ -95,7 +96,7 @@ export default function DashboardLayout({
             <div className="flex items-center">
               {/* User Avatar */}
               <div className="bg-blue-500 text-white p-2 rounded-full w-12 h-12 flex items-center justify-center">
-                FH
+                SM
               </div>
             </div>
           </div>
