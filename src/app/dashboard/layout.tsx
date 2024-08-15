@@ -1,18 +1,17 @@
-
 // https://tailwindcomponents.com/component/tailwind-css-admin-dashboard-layout
 // https://gist.github.com/Klerith/3949f1c8b884d7101e378dfb668f0f3a
 
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Link from "next/link";
 
 const links = [
   { name: "accordion", href: "accordion" },
   { name: "alert", href: "alert" },
   { name: "button", href: "button" },
-  { name: "alert dialog", href:"alert-dialog"},
-  { name: "dialog", href:"dialog"},
-  { name: "badge", href:"badge"}
+  { name: "alert dialog", href: "alert-dialog" },
+  { name: "dialog", href: "dialog" },
+  { name: "badge", href: "badge" },
 ].sort((a, b) => a.name.localeCompare(b.name));
-
 
 export default function DashboardLayout({
   children,
@@ -100,9 +99,10 @@ export default function DashboardLayout({
             </div>
             <div className="flex items-center">
               {/* User Avatar */}
-              <div className="bg-blue-500 text-white p-2 rounded-full w-12 h-12 flex items-center justify-center">
-                SM
-              </div>
+              <Avatar>
+                <AvatarImage src="https://avatars.githubusercontent.com/u/121972751?v=4" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
             </div>
           </div>
         </div>
