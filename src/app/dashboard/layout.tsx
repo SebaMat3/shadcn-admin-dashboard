@@ -1,3 +1,4 @@
+
 // https://tailwindcomponents.com/component/tailwind-css-admin-dashboard-layout
 // https://gist.github.com/Klerith/3949f1c8b884d7101e378dfb668f0f3a
 
@@ -8,8 +9,10 @@ const links = [
   { name: "alert", href: "alert" },
   { name: "button", href: "button" },
   { name: "alert dialog", href:"alert-dialog"},
-  { name: "dialog", href:"dialog"}
-];
+  { name: "dialog", href:"dialog"},
+  { name: "badge", href:"badge"}
+].sort((a, b) => a.name.localeCompare(b.name));
+
 
 export default function DashboardLayout({
   children,
