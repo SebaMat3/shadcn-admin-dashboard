@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { Card, CardContent } from "@/components/ui/card"
-import Autoplay from 'embla-carousel-autoplay'
+
 
 
 export default function Page() {
@@ -16,7 +16,8 @@ export default function Page() {
     <div className="w-full flex justify-center items-center">
       <Carousel 
         className="w-full max-w-xs"
-        plugins = {[Autoplay({delay :1000})]}
+        autoplay={2000}
+        //plugins = {[Autoplay({delay :2000})]}
         opts={{
           dragFree: true,
           loop: true,
@@ -24,7 +25,7 @@ export default function Page() {
       >
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+            <CarouselItem key={index} className="sm:basis-1/2 md:basis-1/2 lg:basis-1/3">
               <div className="p-1">
                 <Card>
                   <CardContent className="flex aspect-square items-center justify-center p-6">
